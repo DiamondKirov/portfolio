@@ -1,0 +1,37 @@
+.skill{
+    padding: 40px 0;
+    background: $colorMain;
+    transform: scale(0);
+    transition: 1s;
+    .skill__wrapper{
+        padding-top: 50px;
+        .skill__item{
+            text-align: center;
+            margin-bottom: 40px;
+           
+            img{
+                padding: 20px;
+                height: 140px;
+                filter: grayscale(100%); 
+                transition: all 0.3s;
+                opacity: 0.7;
+            }
+            img:hover{
+                padding: 0 20px;
+                height: 140px;
+                opacity: 1;
+                filter: grayscale(0); 
+            }
+        }
+    }
+    h1{
+        width: 100%;
+        padding: 20px 0;
+        margin-bottom: 30px;
+        font-family: $fontMain;
+        text-align: center;
+        font-size: 42px;
+        border-bottom: 4px solid rgba(black, 0.8);
+    }
+
+}

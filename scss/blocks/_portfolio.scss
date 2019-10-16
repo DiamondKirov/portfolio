@@ -1,0 +1,117 @@
+.portfolio{
+    padding: 40px 0;
+    opacity: 0;
+    transition: all 1s;
+    h1{
+        width: 100%;
+        padding: 20px 0;
+        margin-bottom: 30px;
+        font-family: $fontMain;
+        text-align: center;
+        font-size: 42px;
+        border-bottom: 2px solid rgba(black, 0.8);
+    }
+    .portfolio__item{
+        margin-bottom: 40px;
+        max-width: 480px;
+        position: relative;
+        overflow: hidden;
+        padding: 3px;
+        img{
+            transition: 0.3s linear;
+            width: 100%;
+            text-align: center;
+            opacity: 1;
+        }
+        &:hover{
+            span:nth-of-type(1){
+                content: '123213';
+                position: absolute;
+                top: 0;
+                left: 0;
+                display: block;
+                width: 100%;
+                height: 4px;
+                background: linear-gradient(to right, rgba( #ffffff, 0) 0%, darken($colorMain, 10%) 100%);
+                animation: animationTop 1.5s linear infinite;
+               
+            }
+            span:nth-of-type(2){
+                content: '';
+                position: absolute;
+                top: 0;
+                right: 0;
+                display: block;
+                width: 4px;
+                height: 100%;
+                background: linear-gradient(to bottom, rgba( #ffffff, 0) 0%, darken($colorMain, 10%) 100%);
+                animation: animationRight 1.5s linear infinite;
+                animation-delay: 0.75s;
+                
+                
+            }
+            span:nth-of-type(3){
+                content: '';
+                position: absolute;
+                bottom: 0px;
+                right: 0px;
+                display: block;
+                width: 100%;
+                height: 4px;
+                background: linear-gradient(to left, rgba( #ffffff, 0) 0%, darken($colorMain, 10%) 100%);
+                animation: animationBottom 1.5s linear infinite;
+            }
+            span:nth-of-type(4){
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0px;
+                display: block;
+                width: 4px;
+                height: 100%;
+                background: linear-gradient(to top, rgba( #ffffff, 0) 0%, darken($colorMain, 10%) 100%);
+                animation: animationLeft 1.5s linear infinite;
+                animation-delay: 0.75s;
+             
+            }
+        }
+        
+    }
+
+}
+
+@keyframes animationTop{
+    0%{
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(100%);
+    }
+}
+
+@keyframes animationRight{
+    0%{
+        transform: translateY(-100%);
+    }
+    100%{
+        transform: translateY(100%);
+    }
+}
+
+@keyframes animationBottom{
+    0%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes animationLeft{
+    0%{
+        transform: translateY(100%);
+    }
+    100%{
+        transform: translateY(-100%);
+    }
+}

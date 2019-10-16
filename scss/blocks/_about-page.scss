@@ -1,0 +1,25 @@
+.about-page{
+    margin-top: 50px;
+    &__img{
+       width: 100%;
+       margin-bottom: 30px;
+    }    
+    &__wrapper{
+        padding: 40px;  
+        background: white;
+        img{
+            width: 100%;
+            border-radius: 50%;
+        }
+        h1{
+            margin-bottom: 25px;
+            font-family: $fontMain;
+            font-size: 32px;
+        }
+        p {
+            font-family: $fontTextN;
+            font-size: 18px;
+        }
+    }
+
+}

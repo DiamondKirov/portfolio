@@ -1,0 +1,348 @@
+.header {
+  padding: 20px 0 10px 0;
+  position: relative;
+  background: white; }
+  .header__logo {
+    height: 60px; }
+  .header__hamburger {
+    position: absolute;
+    right: 30px;
+    top: 48px;
+    display: none;
+    width: 15px;
+    height: 12px;
+    cursor: pointer; }
+    .header__hamburger span {
+      display: block;
+      margin-bottom: 3px;
+      width: 100%;
+      height: 2px;
+      background: black; }
+  .header__nav li {
+    list-style: none;
+    display: block; }
+    .header__nav li a {
+      position: relative;
+      font-family: "Fira Sans";
+      color: rgba(0, 0, 0, 0.8);
+      text-decoration: none;
+      transition: all 0.3s; }
+      .header__nav li a:hover {
+        color: #33d6c9; }
+        .header__nav li a:hover::after {
+          transform: scale(1); }
+      .header__nav li a::after {
+        content: '';
+        position: absolute;
+        display: block;
+        left: 0;
+        top: 40px;
+        width: 100%;
+        height: 2px;
+        background-color: #33d6c9;
+        transform: scale(0);
+        transition: all 0.3s; }
+
+@media (max-width: 770px) {
+  .header {
+    padding: 20px; }
+    .header__hamburger {
+      display: block; }
+    .header__nav {
+      margin-top: 20px;
+      flex-direction: column;
+      padding: 0; }
+      .header__nav li {
+        display: none; }
+        .header__nav li a {
+          font-weight: bold; }
+          .header__nav li a:hover {
+            color: #33d6c9; }
+            .header__nav li a:hover::after {
+              transform: scale(0); } }
+
+.top-info {
+  margin-top: 50px; }
+  .top-info__information {
+    background: white;
+    margin: 0 auto;
+    text-align: center;
+    padding: 150px 0; }
+    .top-info__information h1 {
+      font-family: "Fira Sans";
+      font-size: 52px; }
+    .top-info__information p {
+      font-family: "Amatic SC";
+      font-size: 35px;
+      font-weight: bold; }
+    .top-info__information .top-info__img {
+      max-width: 350px; }
+      .top-info__information .top-info__img img {
+        width: 100%; }
+
+.about-me {
+  margin-top: 50px;
+  position: relative;
+  left: -200px;
+  opacity: 0;
+  transition: 0.7s linear;
+  background: #33d6c9; }
+  .about-me .about-me__wrapper {
+    padding: 0 20px;
+    padding-bottom: 30px;
+    justify-content: center;
+    align-items: center; }
+    .about-me .about-me__wrapper h1 {
+      width: 100vw;
+      padding: 20px 0;
+      margin-bottom: 30px;
+      font-family: "Fira Sans";
+      text-align: center;
+      font-size: 42px;
+      border-bottom: 4px solid rgba(0, 0, 0, 0.8); }
+    .about-me .about-me__wrapper .about-me__photo {
+      margin-top: 25px;
+      text-align: center;
+      max-width: 550px; }
+      .about-me .about-me__wrapper .about-me__photo img {
+        width: 100%;
+        border-radius: 30px; }
+    .about-me .about-me__wrapper .about-me__info {
+      margin-top: 30px;
+      padding: 20px 30px 20px 50px;
+      background: white;
+      border-radius: 20px; }
+      .about-me .about-me__wrapper .about-me__info p {
+        font-family: "Amatic SC";
+        font-weight: bold;
+        font-size: 35px; }
+
+.skill {
+  padding: 40px 0;
+  background: #33d6c9;
+  transform: scale(0);
+  transition: 1s; }
+  .skill .skill__wrapper {
+    padding-top: 50px; }
+    .skill .skill__wrapper .skill__item {
+      text-align: center;
+      margin-bottom: 40px; }
+      .skill .skill__wrapper .skill__item img {
+        padding: 20px;
+        height: 140px;
+        filter: grayscale(100%);
+        transition: all 0.3s;
+        opacity: 0.7; }
+      .skill .skill__wrapper .skill__item img:hover {
+        padding: 0 20px;
+        height: 140px;
+        opacity: 1;
+        filter: grayscale(0); }
+  .skill h1 {
+    width: 100%;
+    padding: 20px 0;
+    margin-bottom: 30px;
+    font-family: "Fira Sans";
+    text-align: center;
+    font-size: 42px;
+    border-bottom: 4px solid rgba(0, 0, 0, 0.8); }
+
+.portfolio {
+  padding: 40px 0;
+  opacity: 0;
+  transition: all 1s; }
+  .portfolio h1 {
+    width: 100%;
+    padding: 20px 0;
+    margin-bottom: 30px;
+    font-family: "Fira Sans";
+    text-align: center;
+    font-size: 42px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.8); }
+  .portfolio .portfolio__item {
+    margin-bottom: 40px;
+    max-width: 480px;
+    position: relative;
+    overflow: hidden;
+    padding: 3px; }
+    .portfolio .portfolio__item img {
+      transition: 0.3s linear;
+      width: 100%;
+      text-align: center;
+      opacity: 1; }
+    .portfolio .portfolio__item:hover span:nth-of-type(1) {
+      content: '123213';
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, #24b2a7 100%);
+      animation: animationTop 1.5s linear infinite; }
+    .portfolio .portfolio__item:hover span:nth-of-type(2) {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: block;
+      width: 4px;
+      height: 100%;
+      background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #24b2a7 100%);
+      animation: animationRight 1.5s linear infinite;
+      animation-delay: 0.75s; }
+    .portfolio .portfolio__item:hover span:nth-of-type(3) {
+      content: '';
+      position: absolute;
+      bottom: 0px;
+      right: 0px;
+      display: block;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(to left, rgba(255, 255, 255, 0) 0%, #24b2a7 100%);
+      animation: animationBottom 1.5s linear infinite; }
+    .portfolio .portfolio__item:hover span:nth-of-type(4) {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0px;
+      display: block;
+      width: 4px;
+      height: 100%;
+      background: linear-gradient(to top, rgba(255, 255, 255, 0) 0%, #24b2a7 100%);
+      animation: animationLeft 1.5s linear infinite;
+      animation-delay: 0.75s; }
+
+@keyframes animationTop {
+  0% {
+    transform: translateX(-100%); }
+  100% {
+    transform: translateX(100%); } }
+
+@keyframes animationRight {
+  0% {
+    transform: translateY(-100%); }
+  100% {
+    transform: translateY(100%); } }
+
+@keyframes animationBottom {
+  0% {
+    transform: translateX(100%); }
+  100% {
+    transform: translateX(-100%); } }
+
+@keyframes animationLeft {
+  0% {
+    transform: translateY(100%); }
+  100% {
+    transform: translateY(-100%); } }
+
+footer {
+  margin-top: 50px; }
+  footer .footer__container {
+    padding: 20px;
+    background: white; }
+    footer .footer__container .footer__logo {
+      height: 60px; }
+
+body {
+  position: relative; }
+
+.portfolio-page {
+  margin-top: 50px; }
+  .portfolio-page__img {
+    width: 100%;
+    margin-bottom: 30px; }
+  .portfolio-page__wrapper {
+    padding: 40px;
+    background: white; }
+    .portfolio-page__wrapper img {
+      width: 100%; }
+    .portfolio-page__wrapper h1 {
+      margin-bottom: 25px;
+      font-family: "Fira Sans";
+      font-size: 32px; }
+    .portfolio-page__wrapper p {
+      font-family: "PT Serif";
+      font-size: 18px; }
+    .portfolio-page__wrapper ul li {
+      font-family: "PT Serif";
+      font-size: 15px;
+      text-transform: uppercase;
+      font-weight: bold; }
+
+.popup {
+  display: none;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  background: rgba(0, 0, 0, 0.6); }
+  .popup__img {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 0; }
+
+.about-page {
+  margin-top: 50px; }
+  .about-page__img {
+    width: 100%;
+    margin-bottom: 30px; }
+  .about-page__wrapper {
+    padding: 40px;
+    background: white; }
+    .about-page__wrapper img {
+      width: 100%;
+      border-radius: 50%; }
+    .about-page__wrapper h1 {
+      margin-bottom: 25px;
+      font-family: "Fira Sans";
+      font-size: 32px; }
+    .about-page__wrapper p {
+      font-family: "PT Serif";
+      font-size: 18px; }
+
+.contact-page {
+  margin-top: 60px; }
+  .contact-page__wrapper {
+    padding: 40px;
+    background: white; }
+    .contact-page__wrapper h2 {
+      margin-bottom: 25px;
+      font-family: "Fira Sans";
+      font-size: 32px; }
+    .contact-page__wrapper p {
+      font-family: "PT Serif";
+      font-size: 18px; }
+  .contact-page__form input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    font-family: "PT Serif";
+    font-size: 15px;
+    border-radius: 5px; }
+  .contact-page__form textarea {
+    margin-bottom: 20px;
+    padding: 10px;
+    width: 100%;
+    resize: none;
+    font-family: "PT Serif";
+    border-radius: 5px; }
+  .contact-page__form input[type="submit"] {
+    border: none;
+    padding: 8px 13px;
+    background: black;
+    font-family: "PT Serif";
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.3); }
+
+body {
+  background: linear-gradient(to right, #f9f9f9 0%, #f0f0f0 50%, #f9f9f9 100%); }

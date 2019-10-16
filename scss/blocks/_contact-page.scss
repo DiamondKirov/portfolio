@@ -1,0 +1,48 @@
+.contact-page{
+    margin-top: 60px;
+    &__wrapper{
+        padding: 40px;
+        background: white;
+        h2{
+            margin-bottom: 25px;
+            font-family: $fontMain;
+            font-size: 32px;
+        }
+        p {
+            font-family: $fontTextN;
+            font-size: 18px;
+        }
+    }
+    &__form{
+        input[type="text"]{
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            font-family: $fontTextN;
+            font-size: 15px;
+            border-radius: 5px;
+        }
+        textarea{
+          
+            margin-bottom: 20px;
+            padding: 10px;
+            width: 100%;
+            resize: none;
+            font-family: $fontTextN;
+            border-radius: 5px;
+        }
+
+        input[type="submit"]{
+            border: none;
+            padding: 8px 13px;
+            background: black;
+            font-family: $fontTextN;
+            color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 5px 0 rgba(black, 0.3)
+        }
+    }
+
+}
+
+

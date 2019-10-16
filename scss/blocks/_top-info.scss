@@ -1,0 +1,26 @@
+.top-info{
+    margin-top: 50px;
+    &__information{
+        background: white;
+     
+        margin: 0 auto;
+        text-align: center;
+        padding: 150px 0;
+        h1{
+            font-family: $fontMain;
+            font-size: 52px;
+        }
+        p{
+            font-family: $fontText;
+            font-size: 35px;
+            font-weight: bold;
+        }
+        .top-info__img{
+            max-width: 350px;
+            img{
+                width: 100%;
+            }
+        }
+       
+    }
+}

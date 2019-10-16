@@ -1,0 +1,45 @@
+.about-me{
+    margin-top: 50px;
+  
+    position: relative;
+    left: -200px;
+    opacity: 0;
+    transition: 0.7s linear;
+    background: $colorMain;
+    .about-me__wrapper{
+        padding: 0 20px;
+        padding-bottom: 30px;
+        justify-content: center;
+        align-items: center;
+        h1{
+            width: 100vw;
+            padding: 20px 0;
+            margin-bottom: 30px;
+            font-family: $fontMain;
+            text-align: center;
+            font-size: 42px;
+            border-bottom: 4px solid rgba(black, 0.8);
+        }
+        .about-me__photo{
+            margin-top: 25px;
+            text-align: center;
+            max-width: 550px;
+            img{
+                width: 100%;
+                border-radius: 30px;
+            }
+
+        }
+        .about-me__info{
+            margin-top: 30px;
+            padding: 20px 30px 20px 50px;
+            background: white;
+            border-radius: 20px;
+            p{
+                font-family: $fontText;
+               font-weight: bold;
+                font-size: 35px;
+            }
+        }
+    }
+}
